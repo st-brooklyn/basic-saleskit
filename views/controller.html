@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Saleskit Controller</title>
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet"> -->
+        <link href='material-design-icons-iconfont/dist/material-design-icons.css' rel="stylesheet">
+        <!-- <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet"> -->
+        <link href="vuetify/dist/vuetify.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="manifest" href="/manifest.webmanifest">
+        <link rel="apple-touch-icon" href="/saleskit_icon_192x192.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Saleskit Controller">
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="css/fontawesome/css/fontawesome-all.min.css">
+
+    </head>
+    <body>
+        <div id="app">
+            <v-app>
+                <!-- <v-navigation-drawer app fixed clipped>
+                    <v-list>
+                        <v-list-tile v-for="i in 2" :to="{path: '/page' + i}">
+                            <v-list-tile-action>
+                                <v-icon>{{ icons[i-1] }}</v-icon>
+                            </v-list-tile-action>
+                            <v-list-tile-content>
+                                <v-list-tile-title>Page {{ i }}</v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-list>
+                </v-navigation-drawer> -->
+                <v-toolbar app fixed clipped-left>
+                  
+                    <v-menu :nudge-width="-100">
+                        <v-toolbar-title slot="activator">{{ projectname }}</v-toolbar-title>
+                        <v-list>
+                            <v-list-tile :to="'/page2'">
+                                <v-avatar ripple size="30px">
+                                        <img src="/images/RHK/logo.jpg" alt="The Excel Hideaway Ratchada-Huaykwang " />
+                                    </v-avatar>
+                                <v-list-tile-title v-text="'The Excel Hideaway Ratchada-Huaykwang'" class="menu-title"></v-list-tile-title>
+                            </v-list-tile>
+                            <v-list-tile :to="'/page1'">
+                                <v-avatar ripple size="30px">
+                                    <img src="/images/Ratchada18/thumbnails/logo.jpg" alt="The Excel Ratchada 18" />
+                                </v-avatar>
+                                <v-list-tile-title v-text="'The Excel Ratchada 18'" class="menu-title"></v-list-tile-title>
+                            </v-list-tile>
+                        </v-list>
+                    </v-menu>
+                </v-toolbar>
+                <v-content>
+                    <v-container fluid>
+                        <v-fade-transition mode="out-in">
+                            <router-view></router-view>
+                        </v-fade-transition>
+                    </v-container>
+                </v-content>      
+            </v-app>
+        </div>
+
+
+        <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+        <script src="vue/dist/vue.min.js"></script>
+        <script src="vuetify/dist/vuetify.min.js"></script>
+        <script src="vue-router/dist/vue-router.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/contentlist.js"></script>    
+        <script src="js/controller.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

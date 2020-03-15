@@ -1,0 +1,15 @@
+{
+    "background_color": "#0c2358",
+    "description": "Saleskit controller",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "icon/fox-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "Saleskit Controller",
+    "short_name": "Saleskit Controller",
+    "start_url": "/pwa-examples/a2hs/index.html"
+  }

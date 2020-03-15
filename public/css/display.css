@@ -1,0 +1,44 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.fullscreen {
+    height: 100vh;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.8s ease;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  visibility: hidden;
+}
+
+video.backgroundvid {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto; */
+  width: auto;
+  z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

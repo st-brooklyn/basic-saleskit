@@ -1,0 +1,31 @@
+{
+  "name": "saleskit",
+  "version": "1.0.0",
+  "description": "A sales kit application",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.allinspire.co.th/salesapps/saleskit.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IT department, All Inspire Development PLC.",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "material-design-icons": "^3.0.1",
+    "material-design-icons-iconfont": "^3.0.3",
+    "popper.js": "^1.16.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "vue": "^2.6.11",
+    "vue-cli": "^2.9.6",
+    "vue-router": "^3.1.6",
+    "vue-socket.io": "^3.0.7",
+    "vuetify": "^1.5.24"
+  }
+}

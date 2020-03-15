@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Saleskit Display</title>
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+        <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet"> -->
+        <!-- <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+        <link href='material-design-icons-iconfont/dist/material-design-icons.css' rel="stylesheet">
+        <link href="vuetify/dist/vuetify.min.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/display.css">
+
+        <script type="text/javascript">
+            function vidfullscreen(elem) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                }
+            }
+            
+            function rrzz(elem) {
+                elem.width = window.innerWidth;
+                elem.height = window.innerHeight;
+            }
+
+            window.onresize = function() {
+                var vid = document.getElementsByTagName("video");
+                vid.width = window.innerWidth;
+                vid.height = window.innerHeight;
+
+                console.log(window.innerWidth + " x " + window.innerHeight);
+            }
+        </script>
+    </head>
+    <body class="fullscreen">
+        <div id="slide" class="fullscreen">
+            <transition-group name='fade' tag='div'>
+                <div v-for="number in [currentNumber]" :key='number' class="centered">
+                        <img v-if="currentGroup !== 'video'" :src="currentImage" class="fullscreen" />
+                        <video v-else class="backgroundvid centered" autoplay controls loop onloadstart="rrzz(this)">
+                            <source :src="currentImage" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>            
+                </div>
+            </transition-group>
+        </div>
+        <div id="app">            
+            <!-- <v-app>                
+                <v-content>
+                    <v-container fluid fullscreen>
+                        <v-fade-transition mode="out-in">
+                            <img v-bind:src="imagepath" width="100%"/>
+                        </v-fade-transition>
+                    </v-container>
+                </v-content>      
+            </v-app> -->
+        </div>
+
+        <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+        <script src="vue/dist/vue.min.js"></script>
+        <!-- <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script> -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/contentlist.js"></script>
+        <script src="js/display.js"></script>
+        
+    </body>
+</html>

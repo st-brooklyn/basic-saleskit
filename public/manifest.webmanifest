@@ -1,0 +1,15 @@
+{    
+    "background_color": "#FFF",
+    "description": "Saleskit controller",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "images/saleskit_icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "Saleskit Controller",
+    "short_name": "Saleskit Controller",
+    "start_url": "/controller"
+}

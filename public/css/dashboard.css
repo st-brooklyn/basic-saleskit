@@ -1,0 +1,97 @@
+body {
+    padding-top: 40px;
+    color: #FFF;
+  }
+  
+  .navbar {
+    background-color: #373737;
+    padding: 5px;
+  }
+  
+  .navbar a {
+    color: #8C8C8C;
+    font-size: 1.5em;
+  }
+  
+  .coligo {
+    color: #D0D0D0;
+    font-size: 0.8em;
+  }
+  
+  .well {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dash-red {
+    color: #DD6161;
+  }
+  
+  .sub-header{
+    color: #777779;
+    font-weight: 300;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr) ) ;
+    grid-gap: 10px;
+    color: #444;
+  }
+  
+  .box {
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .application.theme--light {
+    color: #FFF;
+    background-image: url("/images/presentation_background.png") !important;
+  }
+
+  div#app {
+    color: #FFF;
+    background-image: url("/images/presentation_background.png") !important;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  .container.fluid{
+    background-attachment:fixed;
+    background-position:center;
+  }
+
+  .avatar img {
+    border: #D0D0D0 solid 1px;
+    -webkit-filter: drop-shadow(3px 3px 3px #222222);
+    filter: drop-shadow(3px 3px 3px #222222);
+  }
+
+  div.imagetitle {
+    padding: 15px 0 0 0 ;
+  }
+
+  .toolbar {
+    background-color: #203864 !important;
+    color: #f5f5f5 !important;
+  }
+
+  .menu-title {
+    padding-left: 10px;
+  }
+
+  .glow-button:hover {
+    color: rgba(255, 255, 255, .5);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+  }
+
+  .application .theme--dark.expansion-panel .expansion-panel__container, .theme--dark .expansion-panel .expansion-panel__container {
+    background: rgba(10, 10, 10, .4) !important;
+  }
