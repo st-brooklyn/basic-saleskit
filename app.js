@@ -6,9 +6,8 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
-var config = require('./config.js');
 var statcontroller = require('./controllers/statcontroller');
-var config = require('./config.js');
+var config = require('./config')
 
 // the object that will hold information about the active users currently
 // on the site

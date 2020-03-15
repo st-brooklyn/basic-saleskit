@@ -12,5 +12,8 @@ var online = {
     dashboardEndpoint: "/dashboard"
 }
 
-module.exports = this.online;
+module.exports = {
+    host: "https://demo-saleskit.herokuapp.com",
+    dashboardEndpoint: "/dashboard"
+};
 
